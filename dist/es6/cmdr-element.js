@@ -1,4 +1,4 @@
-import Shell from 'cmdr'
+import Shell from 'cmdrjs/cmdrjs'
 import {customElement, bindable, inject} from 'aurelia-framework';
 
 @customElement('cmdr')
@@ -11,5 +11,9 @@ export class CmdrElement {
 
     attached() {
         this.shell = new Shell(this.element);
+    }
+    
+    detached() {
+        this.shell.dispose();
     }
 }

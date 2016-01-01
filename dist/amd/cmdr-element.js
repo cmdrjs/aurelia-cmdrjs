@@ -1,4 +1,4 @@
-define(['exports', 'cmdr', 'aurelia-framework'], function (exports, _cmdr, _aureliaFramework) {
+define(['exports', 'cmdrjs/cmdrjs', 'aurelia-framework'], function (exports, _cmdrjsCmdrjs, _aureliaFramework) {
     'use strict';
 
     Object.defineProperty(exports, '__esModule', {
@@ -11,7 +11,7 @@ define(['exports', 'cmdr', 'aurelia-framework'], function (exports, _cmdr, _aure
 
     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-    var _Shell = _interopRequireDefault(_cmdr);
+    var _Shell = _interopRequireDefault(_cmdrjsCmdrjs);
 
     var CmdrElement = (function () {
         function CmdrElement(element) {
@@ -25,6 +25,11 @@ define(['exports', 'cmdr', 'aurelia-framework'], function (exports, _cmdr, _aure
             key: 'attached',
             value: function attached() {
                 this.shell = new _Shell['default'](this.element);
+            }
+        }, {
+            key: 'detached',
+            value: function detached() {
+                this.shell.dispose();
             }
         }]);
 

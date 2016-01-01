@@ -10,9 +10,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-var _cmdr = require('cmdr');
+var _cmdrjsCmdrjs = require('cmdrjs/cmdrjs');
 
-var _cmdr2 = _interopRequireDefault(_cmdr);
+var _cmdrjsCmdrjs2 = _interopRequireDefault(_cmdrjsCmdrjs);
 
 var _aureliaFramework = require('aurelia-framework');
 
@@ -27,7 +27,12 @@ var CmdrElement = (function () {
     _createClass(CmdrElement, [{
         key: 'attached',
         value: function attached() {
-            this.shell = new _cmdr2['default'](this.element);
+            this.shell = new _cmdrjsCmdrjs2['default'](this.element);
+        }
+    }, {
+        key: 'detached',
+        value: function detached() {
+            this.shell.dispose();
         }
     }]);
 

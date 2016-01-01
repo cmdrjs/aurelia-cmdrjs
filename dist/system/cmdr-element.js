@@ -1,4 +1,4 @@
-System.register(['cmdr', 'aurelia-framework'], function (_export) {
+System.register(['cmdrjs/cmdrjs', 'aurelia-framework'], function (_export) {
     'use strict';
 
     var Shell, customElement, bindable, inject, CmdrElement;
@@ -8,8 +8,8 @@ System.register(['cmdr', 'aurelia-framework'], function (_export) {
     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
     return {
-        setters: [function (_cmdr) {
-            Shell = _cmdr['default'];
+        setters: [function (_cmdrjsCmdrjs) {
+            Shell = _cmdrjsCmdrjs['default'];
         }, function (_aureliaFramework) {
             customElement = _aureliaFramework.customElement;
             bindable = _aureliaFramework.bindable;
@@ -28,6 +28,11 @@ System.register(['cmdr', 'aurelia-framework'], function (_export) {
                     key: 'attached',
                     value: function attached() {
                         this.shell = new Shell(this.element);
+                    }
+                }, {
+                    key: 'detached',
+                    value: function detached() {
+                        this.shell.dispose();
                     }
                 }]);
 
