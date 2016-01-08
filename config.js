@@ -16,7 +16,7 @@ System.config({
     "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.0.7",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
-    "cmdrjs/cmdrjs": "github:cmdrjs/cmdrjs@1.1.3-beta",
+    "cmdrjs": "github:cmdrjs/cmdrjs@1.1.3-beta",
     "core-js": "npm:core-js@1.2.6",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
