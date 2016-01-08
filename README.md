@@ -2,8 +2,6 @@
 
 A [cmdrjs](https://github.com/cmdrjs/cmdrjs) custom element for [Aurelia](http://aurelia.io/).
 
-[![Build status](https://travis-ci.org/cmdrjs/aurelia-cmdrjs.png)](https://travis-ci.org/cmdrjs/aurelia-cmdrjs)  
-
 ## Installing the plugin
 
 #### Bower
